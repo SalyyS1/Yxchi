@@ -1,0 +1,146 @@
+/* Extra styles for new interactive features */
+.footer-buttons {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
+    z-index: 50;
+}
+.footer-buttons button {
+    padding: 0.4rem 0.8rem;
+    border-radius: 12px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.footer-buttons button:hover {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    overflow-y: auto;
+    padding: 1.2rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    color: #222;
+}
+.modal-close {
+    position: absolute;
+    top: 0.4rem;
+    right: 0.8rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #555;
+}
+.modal-close:hover {
+    color: #000;
+}
+.action-btn {
+    margin-top: 0.8rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    border: none;
+    background: #4ecdc4;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+.action-btn:hover {
+    background: #38a3a5;
+}
+
+.guestbook-messages {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.guestbook-item {
+    background: rgba(255, 255, 255, 0.4);
+    padding: 0.4rem 0.6rem;
+    border-radius: 8px;
+    color: #222;
+}
+
+.memory-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.8rem;
+}
+.memory-item {
+    max-width: 120px;
+    max-height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.achievement-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0.8rem;
+}
+.achievement-list li {
+    padding: 0.3rem 0.5rem;
+    border-radius: 8px;
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+}
+.achievement-list li.achieved {
+    background: rgba(76, 175, 80, 0.2);
+    color: #2e7d32;
+}
+.achievement-list li.locked {
+    background: rgba(244, 67, 54, 0.2);
+    color: #c62828;
+}
+
+.setting-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.6rem;
+    font-size: 0.9rem;
+}
+
+/* Winter Mode Theme */
+body.winter-mode {
+    background: linear-gradient(to bottom, #a8d8f0, #e0f7fa);
+    color: #00334e;
+}
+body.winter-mode .glass {
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(8px);
+}
+body.winter-mode .footer-buttons button {
+    background: rgba(0, 0, 0, 0.3);
+}
