@@ -40,7 +40,6 @@
                     <img src="assets/images/white-cat.gif" alt="Cute Cat" class="cat-gif" />
                 </h1>
                 <p class="motto">Em la mat troi cua anh</p>
-
                 <div class="tags-container">
                     <span class="tag uiux"><i class="fas fa-paint-brush"></i> Bae so cute</span>
                     <span class="tag gamer"><i class="fas fa-gamepad"></i> Gamer</span>
@@ -48,7 +47,6 @@
                     <span class="tag anime"><i class="fas fa-film"></i> Anime Fan</span>
                     <span class="tag photo"><i class="fas fa-camera"></i> Photographer</span>
                     <span class="tag artist"><i class="fas fa-pencil-alt"></i> Artist</span>
-
                 </div>
             </div>
         </section>
@@ -57,7 +55,7 @@
         <section class="personal-intro">
             <div class="gallery">
                 <img src="assets/images/gif1.gif" class="gallery-item" data-id="1" alt="About Me">
-                <img src="assets/images/gif2.gif" class="gallery-item" data-id="2" alt="Likes & Dislikes">
+                <img src="assets/images/gif2.gif" class="gallery-item" data-id="2" alt="Likes &amp; Dislikes">
                 <img src="assets/images/gif3.gif" class="gallery-item" data-id="3" alt="Interests">
                 <img src="assets/images/gif4.gif" class="gallery-item" data-id="4" alt="Social Media">
             </div>
@@ -69,7 +67,7 @@
                     <button class="nav-btn next" onclick="navigateModal(1)"><i class="fas fa-chevron-right"></i></button>
                     <img src="assets/images/gif1.gif" alt="About Me" class="modal-image">
                     <h2>✧ About Me ✧</h2>
-                    <p>✦ Hoàng Hạ Chi 🍪 (yxchi)</p>
+                    <p>✦ Hoàng Hạ Chi  (yxchi)</p>
                     <p>✦ February 7 2010, she/her</p>
                     <p>✦ Hai Duong, VietNam</p>
                     <p>✦ MC, Artists, Coder, Player</p>
@@ -80,14 +78,14 @@
                 <div class="modal-content">
                     <button class="nav-btn prev" onclick="navigateModal(-1)"><i class="fas fa-chevron-left"></i></button>
                     <button class="nav-btn next" onclick="navigateModal(1)"><i class="fas fa-chevron-right"></i></button>
-                    <img src="assets/images/gif2.gif" alt="Likes & Dislikes" class="modal-image">
-                    <h2>✧ Likes & Dislikes ✧</h2>
+                    <img src="assets/images/gif2.gif" alt="Likes &amp; Dislikes" class="modal-image">
+                    <h2>✧ Likes &amp; Dislikes ✧</h2>
                     <p><strong>♥ Likes:</strong></p>
                     <p>✦ kpop, pet, anime, milk tea</p>
                     <p>✦ music, sleep, library...</p>
                     <p><strong>✗ Dislikes:</strong></p>
                     <p>✦ antis, soft stans, toxic</p>
-                    <p>✦ loud noises, crowed places...</p>
+                    <p>✦ loud noises, crowded places...</p>
                 </div>
             </div>
 
@@ -97,11 +95,11 @@
                     <button class="nav-btn next" onclick="navigateModal(1)"><i class="fas fa-chevron-right"></i></button>
                     <img src="assets/images/gif3.gif" alt="Interests" class="modal-image">
                     <h2>✧ Interests ✧</h2>
-                    <p><strong>🎮 Games:</strong></p>
+                    <p><strong> Games:</strong></p>
                     <p>✦ <i class="fas fa-crosshairs"></i> Valorant</p>
                     <p>✦ <i class="fas fa-wind"></i> Genshin impact</p>
                     <p>✦ <i class="fas fa-feather-alt"></i> Sky: Children of the Light</p>
-                    <p><strong>📚 Manga:</strong></p>
+                    <p><strong> Manga:</strong></p>
                     <p>✦ I love Amy, Adabana, …</p>
                 </div>
             </div>
@@ -142,10 +140,85 @@
         </div>
     </div>
 
+    <!-- Footer Buttons for new features -->
+    <footer class="footer-buttons glass">
+        <button id="checkin-btn">Điểm danh</button>
+        <button id="achievements-btn">Thành tựu</button>
+        <button id="guestbook-btn">Guestbook</button>
+        <button id="memory-btn">Kho kỷ niệm</button>
+        <button id="winter-btn">Winter Mode</button>
+        <button id="settings-btn">Settings</button>
+    </footer>
+
+    <!-- Check-in Modal -->
+    <div id="checkin-modal" class="modal-overlay">
+        <div class="modal-content glass">
+            <button class="modal-close">&times;</button>
+            <h2>Điểm danh 100 ngày</h2>
+            <p id="checkin-message">Hãy điểm danh để nhận lời nhắn hôm nay!</p>
+            <button id="checkin-do" class="action-btn">Điểm danh hôm nay</button>
+            <p id="checkin-info"></p>
+        </div>
+    </div>
+
+    <!-- Achievements Modal -->
+    <div id="achievements-modal" class="modal-overlay">
+        <div class="modal-content glass">
+            <button class="modal-close">&times;</button>
+            <h2>Thành tựu</h2>
+            <ul id="achievement-list" class="achievement-list"></ul>
+        </div>
+    </div>
+
+    <!-- Guestbook Modal -->
+    <div id="guestbook-modal" class="modal-overlay">
+        <div class="modal-content glass">
+            <button class="modal-close">&times;</button>
+            <h2>Sổ lưu bút</h2>
+            <form id="guestbook-form">
+                <input type="text" id="guestbook-name" placeholder="Tên của bạn" required>
+                <textarea id="guestbook-message" placeholder="Lời nhắn" rows="3" required></textarea>
+                <button type="submit" class="action-btn">Gửi lời nhắn</button>
+            </form>
+            <div id="guestbook-messages" class="guestbook-messages"></div>
+        </div>
+    </div>
+
+    <!-- Memory Modal -->
+    <div id="memory-modal" class="modal-overlay">
+        <div class="modal-content glass">
+            <button class="modal-close">&times;</button>
+            <h2>Kho kỷ niệm</h2>
+            <input type="file" id="memory-upload" multiple accept="image/*,video/*,audio/*">
+            <div id="memory-gallery" class="memory-gallery"></div>
+        </div>
+    </div>
+
+    <!-- Settings Modal -->
+    <div id="settings-modal" class="modal-overlay">
+        <div class="modal-content glass">
+            <button class="modal-close">&times;</button>
+            <h2>Cài đặt</h2>
+            <label class="setting-item">
+                <input type="checkbox" id="settings-winter-toggle">
+                Bật Winter Mode
+            </label>
+            <label class="setting-item">
+                <input type="checkbox" id="settings-auto-music-toggle" checked>
+                Tự động phát nhạc
+            </label>
+            <label class="setting-item">
+                <input type="checkbox" id="settings-cursor-toggle" checked>
+                Bật Custom Cursor
+            </label>
+        </div>
+    </div>
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
     <script src="script.js"></script>
+    <!-- Extra script with new features -->
+    <script src="extra.js"></script>
 </body>
 </html>
